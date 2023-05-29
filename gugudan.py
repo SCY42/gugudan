@@ -266,9 +266,9 @@ def leaderboard():
 
 def leaderboard_register(gamemode, result):
     username_format = re.compile("[a-zA-Z0-9]+")
-    username = input("유저네임을 입력하세요(영문, 숫자)... ")
-    while not username_format.match(username):
-        username = input("유저네임을 입력하세요(영문, 숫자)... ")
+    username = input("유저네임을 입력하세요(최대 8자의 영문, 숫자)... ")
+    while not username_format.match(username) or len(username) > 8:
+        username = input("유저네임을 입력하세요(최대 8자의 영문, 숫자)... ")
     username = f"{username:<8}"
 
     if gamemode == "t":
