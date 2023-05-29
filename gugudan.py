@@ -35,7 +35,7 @@ def menu_redirection(player_input):
     elif player_input == "q":
         print("안녕히 가세요!")
         time.sleep(1)
-        quit() # 프로그램 종료
+        exit() # 프로그램 종료
     else:
         print("잘못된 입력")
 
